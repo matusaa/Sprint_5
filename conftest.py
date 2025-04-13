@@ -2,15 +2,15 @@ import pytest
 from selenium import webdriver
 from locators import *
 import random
+from constants import Constants
 
 @pytest.fixture
 def driver():
     browser = webdriver.Chrome()
     browser.maximize_window()
-    browser.get('https://stellarburgers.nomoreparties.site/')
+    browser.get(Constants.URL)
     yield browser
     browser.quit()
-
 
 @pytest.fixture
 def generate_login():
@@ -21,15 +21,6 @@ def generate_login():
 def generate_password():
     password = random.randint(111111, 9999999)
     return password
-
-class Constants:
-    URL = 'https://stellarburgers.nomoreparties.site/'
-    URL_REG = 'https://stellarburgers.nomoreparties.site/register'
-    URL_LOGIN = 'https://stellarburgers.nomoreparties.site/login'
-    URL_PROFILE = 'https://stellarburgers.nomoreparties.site/account/profile'
-    NAME = 'Alex'
-    EMAIL = 'Alex19111@mail.ru'
-    PASSWORD = '123456'
 
 @pytest.fixture
 def constants():

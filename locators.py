@@ -20,12 +20,13 @@ PROFILE_LINK = (By.XPATH, "//a[contains(text(),'Профиль')]") #Ссылк�
 CONSTRUCTOR_LINK = (By.XPATH, "//p[contains(text(),'Конструктор')]") #Ссылка на конструктор
 LOGO = (By.CLASS_NAME, "AppHeader_header__logo__2D0X2") # Логотип Stellar Burgers
 LOGOUT_BUTTON = (By.XPATH, "//button[contains(text(),'Выход')]") # Кнопка "Выход" в личном кабинете
-SECTION_BUNS = (By.XPATH, "//h2[@class='text text_type_main-medium mb-6 mt-10' and text()='Булки']")
-# Заголовок раздела "Булки" в конструкторе
-SECTION_SAUCE = (By.XPATH, "//h2[@class='text text_type_main-medium mb-6 mt-10' and text()='Соусы']")
-# Заголовок раздела "Соусы" в конструкторе
-SECTION_FILLINGS = (By.XPATH, "//h2[@class='text text_type_main-medium mb-6 mt-10' and text()='Начинки']")
-# Заголовок раздела "Начинки" в конструкторе
-BUNS_BUTTON = (By.XPATH, "//span[text()='Булки']") # Кнопка конструктора для перехода в раздел "Булки"
-SAUCE_BUTTON = (By.XPATH, "//span[text()='Соусы']") # Кнопка конструктора для перехода в раздел "Соусы"
-FILLINGS_BUTTON = (By.XPATH, "//span[text()='Начинки']") # Кнопка конструктора для перехода в раздел "Начинки"
+
+CONSTRUCTOR_TAB_BUNS = (By.XPATH, "*//span[contains(text(), 'Булки')]") #Таб "Булки" в конструкторе
+CONSTRUCTOR_TAB_SAUCE = (By.XPATH, "*//span[contains(text(), 'Соусы')]") #Таб "Соусы" в конструкторе
+CONSTRUCTOR_TAB_FILLING = (By.XPATH, "*//span[contains(text(), 'Начинки')]") #Таб "Начинки" в конструкторе
+ACTIVE_TAB_BUNS = (By.XPATH,"//div[contains(@class, 'tab_tab_type_current__2BEPc')"and "span/text()='Булки']")
+#Активный таб "Булки" в конструкторе
+ACTIVE_TAB_SAUCE = (By.XPATH, "//div[contains(@class, 'tab_tab_type_current__2BEPc')" and "span/text()='Соусы']")
+#Активный таб "Соусы" в конструкторе
+ACTIVE_TAB_FILLING = (By.XPATH,"//div[contains(@class, 'tab_tab_type_current__2BEPc')" and "span/text()='Начинки']")
+#Активный таб "Начиники" в конструкторе

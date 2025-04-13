@@ -1,8 +1,9 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support import expected_conditions as EC
-from conftest import generate_login, generate_password, Constants
+from conftest import generate_login, generate_password
 from locators import *
+from constants import Constants
 
 class TestRegistration:
     # Проверка успешной регистрации
